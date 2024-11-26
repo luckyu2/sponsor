@@ -3,13 +3,13 @@
     text-align: center;
 }
 /* 顶部 */
-.message {
-    padding: 20px 0 0 0;
+.message{
+    margin-top: 5vh;
 }
+
 .message p{
     line-height: 28px;
     color:#888;
-    font-size: 0.9em; /* 相对字体大小 */
 }
 
  .container {
@@ -18,7 +18,8 @@
     max-width: 800px; /* 最大宽度 */
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
+    padding: 30px 10px;
+    box-sizing: border-box;
     border-radius: 8px;
     /* 添加阴影效果 */
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -34,7 +35,7 @@
 #payment-methods button {
     margin: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 0.9em; /* 相对字体大小 */
     cursor: pointer;
     /* 调整按钮样式以适应图标 */
     display: inline-flex;
@@ -43,8 +44,7 @@
 }
 
 
-
-/* 赞助人 */
+/* 赞助人列表 */
 .sponsor img {
     width: 50px;
     height: 50px;
@@ -98,8 +98,6 @@
     backdrop-filter: blur(8px);
 }
 
-
-
 /* 为旧版浏览器提供兼容性 */
 @supports not (backdrop-filter: blur(8px)) {
     .modal {
@@ -144,13 +142,7 @@
 /* 动态背景样式 */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    /* align-items: center; */
     height: 100vh;
-    margin: 0;
     /* 动态背景 */
     background: 
         linear-gradient(45deg, #007BFF, #00BFFF, #17A2B8, #20C997, #28A745, #FFC107, #FF9800, #DC3545, #7952B3, #6F42C1, #563D7C, #343A40),
@@ -166,3 +158,8 @@ body {
     100% {background-position: 0% 50%;}
 }
 
+@media (min-width: 600px) {
+    body {
+      overflow: hidden;
+    } 
+  }

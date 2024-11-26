@@ -1,33 +1,29 @@
-/* 动态背景样式 */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    /* 动态背景 */
-    background: 
-        linear-gradient(45deg, #007BFF, #00BFFF, #17A2B8, #20C997, #28A745, #FFC107, #FF9800, #DC3545, #7952B3, #6F42C1, #563D7C, #343A40),
-        linear-gradient(45deg, #007BFF, #00BFFF, #17A2B8, #20C997, #28A745, #FFC107, #FF9800, #DC3545, #7952B3, #6F42C1, #563D7C, #343A40);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+.section {
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+/* 顶部 */
+.message {
+    padding: 20px 0 0 0;
+}
+.message p{
+    line-height: 28px;
+    color:#888;
 }
 
-/* 动态背景的动画 */
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-.container {
+ .container {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     /* 添加阴影效果 */
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+/* 打赏 */
+.support{
+    margin: 2px 0;
 }
 .btn-font{
     margin-left: 8px;
@@ -44,6 +40,44 @@ body {
     justify-content: center;
 }
 
+/* 赞助人 */
+.sponsor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.sponsors-list {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 10px;
+    gap: 10px;
+    padding: 10px 0;
+}
+.sponsor {
+    flex: 0 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+/* 自定义滚动条样式 */
+.sponsors-list::-webkit-scrollbar {
+    height: 10px;
+}
+.sponsors-list::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+}
+.sponsors-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
 /* 模态框样式 */
 .modal {
     display: none; 
@@ -59,6 +93,8 @@ body {
     /* 磨砂效果 */
     backdrop-filter: blur(8px);
 }
+
+
 
 /* 为旧版浏览器提供兼容性 */
 @supports not (backdrop-filter: blur(8px)) {
@@ -101,5 +137,28 @@ body {
     max-width: 300px;
 }
 
+/* 动态背景样式 */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    margin: 0;
+    /* 动态背景 */
+    background: 
+        linear-gradient(45deg, #007BFF, #00BFFF, #17A2B8, #20C997, #28A745, #FFC107, #FF9800, #DC3545, #7952B3, #6F42C1, #563D7C, #343A40),
+        linear-gradient(45deg, #007BFF, #00BFFF, #17A2B8, #20C997, #28A745, #FFC107, #FF9800, #DC3545, #7952B3, #6F42C1, #563D7C, #343A40);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
 
+/* 动态背景的动画 */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 

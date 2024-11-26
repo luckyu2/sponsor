@@ -1,12 +1,11 @@
-    // 获取模态框和关闭按钮的引用
+    // 获取二维码框和关闭按钮
     const modal = document.getElementById("modal");
     const qrCodeImage = document.getElementById("qrcode");
 
-
     // 显示模态框并设置二维码图片
     function showQRCode(paymentMethod) {
-        // 放图床上图片URL
         const imageUrls = {
+	// 放图床上图片URL
             'wechat': 'https://s2.loli.net/2024/11/22/Kbs8kTPv5AuapzC.jpg',
             'alipay': 'https://s2.loli.net/2024/11/20/lj7eAIgKSvG4CaB.png'
         };
@@ -22,7 +21,7 @@
         modal.style.display = "none";
     }
 
-    // 当点击二维码框以外的区域时关闭模态框
+    // 当点击二维码框以外的区域时关闭
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -72,7 +71,7 @@
         sponsorsList.scrollLeft = scrollLeft - walk;
     });
 
-右键时恶搞一下的小彩蛋
+//右键时恶搞一下的小彩蛋
 document.onkeydown=function(){
     var e = window.event||arguments[0];
     if(e.keyCode==123){

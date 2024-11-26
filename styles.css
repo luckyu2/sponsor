@@ -9,11 +9,13 @@
 .message p{
     line-height: 28px;
     color:#888;
+    font-size: 0.9em; /* 相对字体大小 */
 }
 
  .container {
-    max-width: 800px;
+    width: 90%; /* 占满90%的宽度 */
     margin: 0 auto;
+    max-width: 800px; /* 最大宽度 */
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
     padding: 30px;
@@ -40,6 +42,8 @@
     justify-content: center;
 }
 
+
+
 /* 赞助人 */
 .sponsor img {
     width: 50px;
@@ -60,7 +64,7 @@
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    width: 150px;
+    width: 130px; /* 适合移动端的宽度 */
     text-align: center;
     scroll-snap-align: start;
 }
@@ -70,7 +74,7 @@
     height: 10px;
 }
 .sponsors-list::-webkit-scrollbar-thumb {
-    background: #666;
+    background: #9c9c9c;
     border-radius: 5px;
 }
 .sponsors-list::-webkit-scrollbar-track {
